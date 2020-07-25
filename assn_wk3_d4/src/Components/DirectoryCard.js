@@ -18,25 +18,26 @@ class DirectoryCard extends Component {
     
     this.state = {
         cardData: data,
-        currentIndex: 3,
+        currentIndex: 0,
         numOfCards: data.length
     };
   }
   
-
     navPrevious = () => {
-    this.setState(({ currentIndex }) => ({
-        currentIndex: currentIndex - 1
-    }));
-    };
+        if ( this.state.currentIndex === 0 ) {
+            this.setState({ currentIndex: this.state.numOfCards -1 });
+        } else {
+            this.setState({ currentIndex: this.state.currentIndex - 1 });
+        }
+        };
 
     navNext = () => {
-        this.setState(({ currentIndex }) => ({    
-        currentIndex: currentIndex + 1
-    }));
-    };
-
-
+        if ( this.state.currentIndex === this.state.numOfCards -1 ) {
+            this.setState({ currentIndex: 0 });
+          } else {
+            this.setState({ currentIndex: this.state.currentIndex + 1 });
+          }
+        };
 
   render() {
     
@@ -74,11 +75,3 @@ class DirectoryCard extends Component {
 
 export default DirectoryCard;
 
-{/* <h1>I am the card</h1>
-        <h2>ID: {this.state.cardData[this.state.currentIndex].id}/25</h2>
-        <h2>Name: {this.state.cardData[this.state.currentIndex].name.first} {this.state.cardData[this.state.currentIndex].name.last}</h2>
-        <h2>City: {this.state.cardData[this.state.currentIndex].city}</h2>
-        <h2>Country: {this.state.cardData[this.state.currentIndex].country}</h2>
-        <h2>Employer: {this.state.cardData[this.state.currentIndex].employer}</h2>
-        <h2>Title: {this.state.cardData[this.state.currentIndex].title}</h2>
-        <h2>Favorite Movies: {this.state.cardData[this.state.currentIndex].favoriteMovies[0]}</h2> */}

@@ -43,7 +43,7 @@ main {
 
 /* ----------Inside Card---------- */
 #cardNum {
-  height: 2%;
+  height: 15px;
   display: flex;
   justify-content: flex-end;
   margin-top: 10px;
@@ -78,7 +78,7 @@ p {
 	flex-wrap: nowrap;
 	justify-content: flex-start;
 	align-items: flex-start;
-	align-content: stretch;
+  align-content: stretch;
 }
 
 ol {
