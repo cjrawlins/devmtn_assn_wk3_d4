@@ -51,8 +51,7 @@ class DirectoryCard extends Component {
                 <CardText 
                     cardData = {this.state.cardData}
                     currIndex = {this.state.currentIndex}
-                    numOfCards = {this.state.numOfCards
-                    }
+                    numOfCards = {this.state.numOfCards}
                 />
                 </div>
                 <div className="button-controls" id="button-div">
